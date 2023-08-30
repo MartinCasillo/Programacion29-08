@@ -11,8 +11,8 @@ public class Operaciones {
         System.out.println("Resultado " + operar(a,b,opcion));
     }
 
-    public static int operar(int a,int b,int opcion){
-        int rta = 0;
+    public static double operar(int a,int b,int opcion){
+        double rta = 0;
         switch (opcion) {
             case 1:
                 rta = a + b;
@@ -21,6 +21,9 @@ public class Operaciones {
                 rta = a - b;
                 break;
             case 3:
+                if (b == 0) {
+                    break;
+                }
                 rta = a / b;
                 break;
             case 4:
